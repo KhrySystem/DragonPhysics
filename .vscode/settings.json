@@ -1,0 +1,8 @@
+{
+    "cmake.configureArgs": [
+        "-DDragon_DIR=/usr/local/lib/cmake/Dragon",
+        "-DDragonCompute_DIR=/usr/local/lib/cmake/DragonCompute",
+    ],
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+}
