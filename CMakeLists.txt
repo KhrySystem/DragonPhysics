@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(DragonPhysics VERSION 0.0.1.0)
+project(DragonPhysics VERSION ${DragonEngine_VERSION})
 
-find_package(Dragon REQUIRED)
-find_package(DragonCompute REQUIRED)
+if(NOT TARGET Dragon::Core)
+    find_package(DragonCore REQUIRED)
+endif()
+
+if(NOT TARGET Dragon::Compute)
+    find_package(DragonCompute REQUIRED)
+endif()
+
+add_subdirectory(src)
